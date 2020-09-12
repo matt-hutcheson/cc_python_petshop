@@ -46,3 +46,7 @@ def remove_pet_by_name(pet_shop_dict, pet_name):
         index += 1
     return pet_shop_dict
 
+
+def add_pet_to_stock(pet_shop_dict, new_pet_dict):
+    pet_shop_dict["pets"].append(new_pet_dict)
+    return pet_shop_dict
