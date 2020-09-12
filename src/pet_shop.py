@@ -38,6 +38,7 @@ def find_pet_by_name(pet_shop_dict, pet_name):
             return pet
 
 
+
 def remove_pet_by_name(pet_shop_dict, pet_name):
     index = 0
     for pet in pet_shop_dict["pets"]:
@@ -78,3 +79,22 @@ def customer_can_afford_pet(customer_dict, new_pet_dict):
         return False
 
 
+# moves pet dictionary from pet_shop to customer pets and 
+# moves money from customer to total_cash and
+# increases pets sold by 1
+def sell_pet_to_customer(pet_shop_dict, pet_name, customer_dict):
+    for pet in pet_shop_dict["pets"]:
+        if pet["name"] == pet_name["name"]:
+            if customer_can_afford_pet(customer_dict,pet) == True:
+                remove_customer_cash(customer_dict,pet["price"])
+                add_or_remove_cash(pet_shop_dict,pet["price"])
+                remove_pet_by_name(pet_shop_dict,pet["name"])
+                add_pet_to_customer(customer_dict, pet)
+                increase_pets_sold(pet_shop_dict,1)
+
+
+
+
+
+
+                
