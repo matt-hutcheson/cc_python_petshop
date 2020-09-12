@@ -84,13 +84,14 @@ def customer_can_afford_pet(customer_dict, new_pet_dict):
 # increases pets sold by 1
 def sell_pet_to_customer(pet_shop_dict, pet_name, customer_dict):
     for pet in pet_shop_dict["pets"]:
-        if pet["name"] == pet_name["name"]:
-            if customer_can_afford_pet(customer_dict,pet) == True:
-                remove_customer_cash(customer_dict,pet["price"])
-                add_or_remove_cash(pet_shop_dict,pet["price"])
-                remove_pet_by_name(pet_shop_dict,pet["name"])
-                add_pet_to_customer(customer_dict, pet)
-                increase_pets_sold(pet_shop_dict,1)
+        if pet_name != None:
+            if pet["name"] == pet_name["name"]:
+                if customer_can_afford_pet(customer_dict,pet) == True:
+                    remove_customer_cash(customer_dict,pet["price"])
+                    add_or_remove_cash(pet_shop_dict,pet["price"])
+                    remove_pet_by_name(pet_shop_dict,pet["name"])
+                    add_pet_to_customer(customer_dict, pet)
+                    increase_pets_sold(pet_shop_dict,1)
 
 
 
