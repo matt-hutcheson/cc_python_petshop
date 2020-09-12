@@ -56,3 +56,6 @@ def get_customer_cash(customer_dict):
     return customer_dict["cash"]
 
 
+def remove_customer_cash(customer_dict, cash_to_remove):
+    customer_dict["cash"] -= cash_to_remove
+    return customer_dict
