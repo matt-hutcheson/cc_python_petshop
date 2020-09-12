@@ -65,3 +65,6 @@ def get_customer_pet_count(customer_dict):
     return len(customer_dict["pets"])
 
 
+def add_pet_to_customer(customer_dict, new_pet_dict):
+    customer_dict["pets"].append(new_pet_dict)
+    return customer_dict
