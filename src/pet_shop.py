@@ -38,4 +38,11 @@ def find_pet_by_name(pet_shop_dict, pet_name):
             return pet
 
 
- 
+def remove_pet_by_name(pet_shop_dict, pet_name):
+    index = 0
+    for pet in pet_shop_dict["pets"]:
+        if pet["name"] == pet_name:
+            pet_shop_dict["pets"].pop(index)
+        index += 1
+    return pet_shop_dict
+
