@@ -15,3 +15,6 @@ def get_pets_sold(pet_shop_dict):
     return pet_shop_dict["admin"]["pets_sold"]
 
 
+def increase_pets_sold(pet_shop_dict, sold_int):
+    pet_shop_dict["admin"]["pets_sold"] += sold_int
+    return pet_shop_dict
