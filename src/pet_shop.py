@@ -18,3 +18,7 @@ def get_pets_sold(pet_shop_dict):
 def increase_pets_sold(pet_shop_dict, sold_int):
     pet_shop_dict["admin"]["pets_sold"] += sold_int
     return pet_shop_dict
+
+
+def get_stock_count(pet_shop_dict):
+    return len(pet_shop_dict["pets"])
