@@ -22,3 +22,13 @@ def increase_pets_sold(pet_shop_dict, sold_int):
 
 def get_stock_count(pet_shop_dict):
     return len(pet_shop_dict["pets"])
+
+
+def get_pets_by_breed(pet_shop_dict, pet_breed):
+    breed = []
+    for pet in pet_shop_dict["pets"]:
+        if pet["breed"] == pet_breed:
+            breed.append(pet)
+    return breed
+
+
