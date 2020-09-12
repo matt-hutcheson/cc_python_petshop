@@ -68,3 +68,13 @@ def get_customer_pet_count(customer_dict):
 def add_pet_to_customer(customer_dict, new_pet_dict):
     customer_dict["pets"].append(new_pet_dict)
     return customer_dict
+
+
+# returns boolean for pass/fail credit check
+def customer_can_afford_pet(customer_dict, new_pet_dict):
+    if customer_dict["cash"] >= new_pet_dict["price"]:
+        return True
+    else:
+        return False
+
+
