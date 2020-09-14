@@ -17,7 +17,6 @@ def get_pets_sold(pet_shop_dict):
 
 def increase_pets_sold(pet_shop_dict, sold_int):
     pet_shop_dict["admin"]["pets_sold"] += sold_int
-    return pet_shop_dict
 
 
 def get_stock_count(pet_shop_dict):
@@ -45,12 +44,10 @@ def remove_pet_by_name(pet_shop_dict, pet_name):
         if pet["name"] == pet_name:
             pet_shop_dict["pets"].pop(index)
         index += 1
-    return pet_shop_dict
 
 
 def add_pet_to_stock(pet_shop_dict, new_pet_dict):
     pet_shop_dict["pets"].append(new_pet_dict)
-    return pet_shop_dict
 
 
 def get_customer_cash(customer_dict):
@@ -59,7 +56,6 @@ def get_customer_cash(customer_dict):
 
 def remove_customer_cash(customer_dict, cash_to_remove):
     customer_dict["cash"] -= cash_to_remove
-    return customer_dict
 
 
 def get_customer_pet_count(customer_dict):
@@ -68,7 +64,6 @@ def get_customer_pet_count(customer_dict):
 
 def add_pet_to_customer(customer_dict, new_pet_dict):
     customer_dict["pets"].append(new_pet_dict)
-    return customer_dict
 
 
 # returns boolean for pass/fail credit check
