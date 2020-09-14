@@ -7,8 +7,7 @@ def get_total_cash(pet_shop_dict):
 
 
 def add_or_remove_cash(pet_shop_dict, cash_change_amount):
-    pet_shop_dict["admin"]["total_cash"] = get_total_cash(pet_shop_dict) + cash_change_amount
-    return pet_shop_dict
+    pet_shop_dict["admin"]["total_cash"] += cash_change_amount
 
 
 def get_pets_sold(pet_shop_dict):
